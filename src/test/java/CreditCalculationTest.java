@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
                 double P = percent / 100 / 12;
                 double payment = credit * (P + (P / ((Math.pow((1 + P), period) - 1))));
                 int expected = (int) payment;
-                int actualResult = new CreditСalculation(credit, percent, period).myPayment();
+                int actualResult = new CreditCalculation(credit, percent, period).myPayment();
 
                 assertEquals(expected, actualResult);
             }
@@ -23,7 +23,7 @@ import static org.junit.jupiter.api.Assertions.*;
                 int period = 24;
                 int payment = 9500;
                 int expected = period * payment;
-                int actualResult = new CreditСalculation(credit, percent, period).refundAmount(payment);
+                int actualResult = new CreditCalculation(credit, percent, period).refundAmount(payment);
 
                 assertEquals(expected, actualResult);
             }
@@ -35,7 +35,7 @@ import static org.junit.jupiter.api.Assertions.*;
                 int period = 24;
                 int sum = 225000;
                 int expected = sum - credit;
-                int actualResult = new CreditСalculation(credit, percent, period).myOverpayment(sum);
+                int actualResult = new CreditCalculation(credit, percent, period).myOverpayment(sum);
 
                 assertEquals(expected, actualResult);
             }

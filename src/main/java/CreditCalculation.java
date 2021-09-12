@@ -1,9 +1,9 @@
-public class CreditСalculation {
+public class CreditCalculation {
     private int credit;
     private double percent;
     private int period;
 
-    public CreditСalculation(int credit, double percent, int period) {
+    public CreditCalculation(int credit, double percent, int period) {
         this.credit = credit;
         this.percent = percent;
         this.period = period;
